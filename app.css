@@ -1,0 +1,143 @@
+/*gamefield skal være en afgrænset boks der er delelig med 16 og 32. Tydelig kant om området */
+#gamefield {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.293);
+    
+}
+
+#player {
+    width: 32px;
+    height: 40px;
+    background-size: 400% 400%;
+    background-image: url('Characters/Character 7.png');
+    translate: 10px 20px;
+}
+
+
+
+.playerMoveRight {
+    background-position: 0% -300%;
+    animation-name: right;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+
+}
+
+.playerMoveLeft {
+    background-position: 0% -200%;
+    animation-name: left;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+
+}
+.playerMoveUp {
+    background-position: 0% -100%;
+    animation-name: up;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+
+}
+.playerMoveDown {
+    background-position: 0% 0%;
+    animation-name: down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+.playerLookLeft {
+    background-position: 0% -200%;
+}
+
+.playerLookRight {
+    background-position: 0% -300%;
+}
+
+.playerLookUp {
+    background-position: 0% -100%;
+}
+
+.playerLookDown {
+    background-position: 0% 0%;
+}
+
+
+
+@keyframes left {
+    0% {
+        background-position: 0% -200%;
+    }
+    25% {
+        background-position: -100% -200%;
+    }
+    50% {
+        background-position: -200% -200%;
+    }
+
+    75% {
+        background-position: -300% -200%;
+    }
+
+  
+}
+
+@keyframes right {
+    0% {
+        background-position: 0% -300%;
+    }
+    25% {
+        background-position: -100% -300%;
+    }
+    50% {
+        background-position: -200% -300%;
+    }
+
+    75% {
+        background-position: -300% -300%;
+    }
+
+  
+}
+
+@keyframes up {
+    0% {
+        background-position: 0% -100%;
+    }
+    25% {
+        background-position: -100% -100%;
+    }
+    50% {
+        background-position: -200% -100%;
+    }
+
+    75% {
+        background-position: -300% -100%;
+    }
+
+  
+}
+
+@keyframes down {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: -100% 0%;
+    }
+    50% {
+        background-position: -200% 0%;
+    }
+
+    75% {
+        background-position: -300% 0%;
+    }
+
+  
+}
