@@ -1,0 +1,43 @@
+#body{
+    background-color: gray;
+    color:#8b8;
+    font-family: 'Courier New', Courier, monospace;
+}
+#background {
+    grid-area: 1/1;
+    display: grid;
+    grid-template-columns: repeat(var(--GRID_WIDTH), max-content);
+    background-repeat: no-repeat;
+
+}
+
+#gamefield {
+    border: 1px solid black;
+    width: fit-content;
+
+}
+
+#background .tile {
+    width: calc(var(--TILE_SIZE) * 1px);
+    aspect-ratio: 1/1;
+    
+    background-image: url('images/tiles/floor_stone.png');
+}
+
+.tile {
+    aspect-ratio: 1/1;
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.tile.grass {
+    background-image: url('images/tiles/grass.png');
+}
+
+.tile.wall {
+    background-image: url('images/tiles/wall.png');
+}
+
+.tile.water {
+    background-image: url('images/tiles/water.png');
+}

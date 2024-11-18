@@ -17,6 +17,28 @@
     translate: 10px 20px;
 }
 
+#enemy{
+  width: 32px;
+    height: 40px;
+    background-size: 400% 400%;
+    background-image: url('Characters/Character 1.png');
+    position: absolute; /* For at kunne bevæge sig inden for gamefield */
+    top: 280px; /* Centrering på gamefield i højden */
+     animation: enemyMove 4s linear infinite;
+      transition: background-color 0.3s ease;
+}
+
+@keyframes enemyMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-568px); /* Bevægelse til venstre (600px bredde minus fjendens bredde) */
+    }
+    100% {
+        transform: translateX(0); /* Tilbage til startposition */
+    }
+}
 
 
 .playerMoveRight {
